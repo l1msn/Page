@@ -1,0 +1,107 @@
+.mainStackInfo {
+    @media screen and (width <= 1000px) {
+        width: 600px;
+    }
+
+    @media screen and (width <= 450px) {
+        width: 300px;
+    }
+}
+
+.thanksContainer {
+    padding-bottom: 10px;
+}
+
+.linksContainer {
+    @media screen and (width <= 1000px) {
+        flex-direction: column;
+    }
+
+    @media screen and (width <= 450px) {
+        flex-direction: column;
+    }
+}
+
+.bioProgramming {
+    @media screen and (width <= 1000px) {
+        width: 600px;
+
+        div {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (width <= 450px) {
+        width: 300px;
+
+        div {
+            flex-direction: column;
+        }
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+}
+
+.bioWhyMe {
+    @media screen and (width <= 1000px) {
+        width: 600px;
+
+        div {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (width <= 450px) {
+        width: 300px;
+
+        div {
+            flex-direction: column;
+        }
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+}
+
+.nameWithPhoto {
+    padding-top: 10px;
+}
+
+.greeting {
+    text-align: center;
+}
+
+.links {
+    @media screen and (width <= 1000px) {
+        svg {
+            padding-left: 5px;
+        }
+    }
+
+    @media screen and (width <= 450px) {
+        svg {
+            padding-left: 5px;
+        }
+    }
+
+}
+
+.newFoto {
+    border-right: 2px solid var(--accent);
+    min-width: 62px;
+    min-height: 22.5%;
+}
+
+.oldFoto {
+    border-left: 2px solid var(--accent);
+    min-width: 62px;
+    min-height: 22.5%;
+}
+
+.miniInfo {
+    padding: 10px;
+    fill: var(--icon);
+}

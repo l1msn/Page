@@ -1,0 +1,28 @@
+.trigger {
+    padding-top: 2px;
+
+    &:hover {
+        .arrowBtn {
+            path {
+                fill: var(--accent);
+                animation: animate 0.1s linear;
+
+                @keyframes animate {
+                    0% {
+                        fill: var(--icon);
+                    }
+
+                    100% {
+                        fill: var(--accent);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.arrowBtn {
+    padding-left: 2px;
+    padding-top: 1px;
+}

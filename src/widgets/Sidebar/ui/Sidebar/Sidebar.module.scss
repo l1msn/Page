@@ -1,0 +1,84 @@
+.SidebarRedesigned {
+    transition: 0.5s;
+    background: var(--sidebar-bg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .appLogo {
+        padding-top: 20px;
+        padding-left: 12px;
+    }
+
+    .items {
+        margin-top: 32px;
+    }
+
+    .collapseBtn {
+        right: 0;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        transform: rotate(90deg);
+    }
+
+    .switchers {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .additionalBtn {
+        gap: 37px;
+        padding-top: 64px;
+        padding-left: 20px;
+    }
+
+    .payBtn {
+        div {
+            margin-left: 21px;
+        }
+    }
+}
+
+.collapsedRedesigned {
+    width: var(--sidebar-width-collapsed);
+
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lang {
+        margin-left: 0;
+    }
+
+    .items {
+        display: flex;
+        align-items: center;
+    }
+
+    .link {
+        opacity: 0;
+        transition: 0.2s opacity;
+        width: 0;
+    }
+
+    .collapseBtn {
+        transform: rotate(-90deg);
+    }
+
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .appLogo {
+        background: none;
+    }
+
+}
+

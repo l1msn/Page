@@ -1,0 +1,32 @@
+.mainLayout {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.header {
+    width: 100%;
+    min-width: 1680px;
+    height: 64px;
+    background: var(--navbar-bg);
+    box-shadow: 0px 4px 5px 0px var(--navbar-bg-shadow);
+}
+
+.sidebar {
+    height: 100%;
+    min-width: 240px;
+    flex-shrink: 0;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    background: var(--content-bg);
+    padding-left: 120px;
+    padding-right: 120px;
+    max-width: 1440px;
+    max-height: 2120px;
+}

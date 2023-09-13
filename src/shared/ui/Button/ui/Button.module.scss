@@ -1,0 +1,118 @@
+.Button {
+    transition: 0.2s;
+    cursor: pointer;
+    color: var(--text);
+    padding-right: 20px;
+    padding-left: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+
+    button {
+        width: 100%;
+        height: 24px;
+    }
+
+    &:not(.disabled) {
+        &:hover {
+            background-color: var(--sibebar-button-hover);
+            opacity: 0.8;
+            fill-opacity: 0.8;
+            stroke-opacity: 0.8;
+        }
+        &:active {
+            background-color: var(--sibebar-button-click);
+        }
+    }
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.clear {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.addonRight,
+.addonLeft {
+    display: flex;
+}
+
+.filled {
+    background: var(--sibebar-button);
+    color: var(--sidebar-text-active);
+    border: none;
+    outline: none;
+
+}
+
+.cancel {
+    background: var(--light);
+    color: var(--cancel);
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+.accept {
+    background: var(--light);
+    color: var(--save);
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+.outline {
+    background: none;
+    border: 2px solid var(--icon);
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+.square {
+    padding: 0;
+}
+
+.square.m {
+    width: var(--font-line-m);
+    height: var(--font-line-m);
+}
+
+.square.l {
+    width: var(--font-line-l);
+    height: var(--font-line-l);
+}
+
+.square.xl {
+    width: var(--font-line-xl);
+    height: var(--font-line-xl);
+}
+
+.m {
+    font: var(--font-m-redesigned);
+}
+
+.l {
+    font: var(--font-l-redesigned);
+}
+
+.xl {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 148%;
+}
+
+.disabled {
+    opacity: 0.35;
+}

@@ -1,0 +1,40 @@
+.balance {
+    color: var(--text-grayed);
+    font-size: 14px;
+    line-height: 20.72px;
+    word-wrap: break-word;
+    .sum {
+        color: var(--text);
+        font-weight: 500;
+    }
+}
+
+.iconAdd {
+    cursor: pointer;
+    path {
+        fill: var(--content-button)
+    }
+
+    &:hover {
+      path {
+        fill: var(--content-button-hover);
+        animation: animate 0.1s linear;
+
+        @keyframes animate {
+          0% {
+            fill: var(--content-button);
+          }
+
+          100% {
+            fill: var(--content-button-hover);
+          }
+        }
+      }
+    }
+
+    &:active {
+        path {
+          fill: var(--content-button-click)
+        }
+    }
+}
