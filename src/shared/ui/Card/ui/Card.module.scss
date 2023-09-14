@@ -1,6 +1,6 @@
 .card {
-    padding: 24px;
-    background: var(--dark-bg);
+
+    background-color: var(--bg);
 }
 
 .max {
@@ -12,11 +12,7 @@
 }
 
 .round {
-    border-radius: 40px;
-}
-
-.normal {
-    background: var(--dark-bg);
+    border-radius: 48px;
 }
 
 .outline {

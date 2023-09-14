@@ -28,9 +28,11 @@ const directionClasses: Record<FlexDirection, string> = {
 const gapClasses: Record<FlexGap, string> = {
     4: cls.gap4,
     8: cls.gap8,
+    12: cls.gap12,
     16: cls.gap16,
     24: cls.gap24,
     32: cls.gap32,
+    48: cls.gap48,
     64: cls.gap64,
 };
 

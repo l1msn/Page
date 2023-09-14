@@ -1,4 +1,13 @@
+.cardBalance {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
 .balance {
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: var(--text-grayed);
     font-size: 14px;
     line-height: 20.72px;
@@ -10,6 +19,7 @@
 }
 
 .iconAdd {
+    margin-left: 10px;
     cursor: pointer;
     path {
         fill: var(--content-button)

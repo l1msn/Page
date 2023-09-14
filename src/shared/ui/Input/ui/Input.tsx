@@ -11,6 +11,8 @@ import cls from './Input.module.scss';
 import { HStack } from '../../Stack';
 import { Text } from '../../Text';
 import InputSize from '../consts/InputSize';
+import CloseIcon from '@/shared/assets/icons/close-icon.svg';
+import Icon from '@/shared/ui/Icon';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
@@ -76,7 +78,7 @@ const Input: React.FC<IInputProps> = memo((props: IInputProps): JSX.Element => {
     };
 
     return (
-        <HStack max gap={'8'}>
+        <HStack max gap={'12'}>
             {label && <Text text={label} />}
             <div
                 className={classNames(cls.InputWrapper, mods, [
@@ -97,9 +99,7 @@ const Input: React.FC<IInputProps> = memo((props: IInputProps): JSX.Element => {
                     placeholder={placeholder}
                     {...otherProps}
                 />
-                {addonRight && (
-                    <div className={cls.addonRight}>{addonRight}</div>
-                )}
+                {isFocus && <Icon width={24} height={24} Svg={CloseIcon} />}
             </div>
         </HStack>
     );

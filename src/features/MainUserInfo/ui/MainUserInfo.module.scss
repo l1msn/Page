@@ -38,20 +38,4 @@
 
 .search {
     cursor: pointer;
-    &:hover {
-            path {
-                fill: var(--accent);
-                animation: animate 0.1s linear;
-
-                @keyframes animate {
-                    0% {
-                        fill: var(--icon);
-                    }
-
-                    100% {
-                        fill: var(--accent);
-                    }
-                }
-            }
-    }
 }

@@ -13,12 +13,10 @@ const CallsPage: React.FC = (): JSX.Element => {
         <Page data-testid={'CallsPage'}>
             <VStack max>
                 <HStack max justify={'end'}>
-                    <Balance />
-                    <DateFilter />
-                </HStack>
-                <HStack>
-                    123
-                    <HStack>123</HStack>
+                    <HStack gap={'48'}>
+                        <Balance />
+                        <DateFilter query={'days'} />
+                    </HStack>
                 </HStack>
                 <CallsList />
             </VStack>

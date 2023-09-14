@@ -24,7 +24,7 @@ const SidebarItem: React.FC<ISidebarItemProps> = memo(
                 activeClassName={cls.active}
                 withDot
             >
-                <Icon Svg={item.Icon} />
+                <Icon Svg={item.Icon} hover={false} />
                 <span className={cls.link}>{t(item.text)}</span>
             </AppLink>
         );

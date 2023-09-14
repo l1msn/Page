@@ -59,7 +59,12 @@ const Sidebar: React.FC<ISidebarProps> = memo(
                             size={'xl'}
                             variant={'filled'}
                             addonRight={
-                                <Icon width={28} height={28} Svg={AddIcon} />
+                                <Icon
+                                    hover={false}
+                                    width={28}
+                                    height={28}
+                                    Svg={AddIcon}
+                                />
                             }
                         >
                             Добавить заказ
@@ -69,7 +74,12 @@ const Sidebar: React.FC<ISidebarProps> = memo(
                             size={'xl'}
                             variant={'filled'}
                             addonRight={
-                                <Icon width={30} height={30} Svg={AlertIcon} />
+                                <Icon
+                                    hover={false}
+                                    width={30}
+                                    height={30}
+                                    Svg={AlertIcon}
+                                />
                             }
                         >
                             Оплата
