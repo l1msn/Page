@@ -1,8 +1,17 @@
+.cardBalance {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
 .balance {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: var(--text-grayed);
     font-size: 14px;
     line-height: 20.72px;
     word-wrap: break-word;
+
     .sum {
         color: var(--text);
         font-weight: 500;
@@ -10,31 +19,33 @@
 }
 
 .iconAdd {
+    margin-left: 10px;
     cursor: pointer;
+
     path {
         fill: var(--content-button)
     }
 
     &:hover {
-      path {
-        fill: var(--content-button-hover);
-        animation: animate 0.1s linear;
-
-        @keyframes animate {
-          0% {
-            fill: var(--content-button);
-          }
-
-          100% {
+        path {
             fill: var(--content-button-hover);
-          }
+            animation: animate 0.1s linear;
+
+            @keyframes animate {
+                0% {
+                    fill: var(--content-button);
+                }
+
+                100% {
+                    fill: var(--content-button-hover);
+                }
+            }
         }
-      }
     }
 
     &:active {
         path {
-          fill: var(--content-button-click)
+            fill: var(--content-button-click)
         }
     }
 }

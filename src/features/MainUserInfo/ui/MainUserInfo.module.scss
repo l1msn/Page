@@ -8,6 +8,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     height: 21px;
+
     p {
         color: var(--text-grayed);
         font-size: 15px !important;
@@ -38,20 +39,4 @@
 
 .search {
     cursor: pointer;
-    &:hover {
-            path {
-                fill: var(--accent);
-                animation: animate 0.1s linear;
-
-                @keyframes animate {
-                    0% {
-                        fill: var(--icon);
-                    }
-
-                    100% {
-                        fill: var(--accent);
-                    }
-                }
-            }
-    }
 }

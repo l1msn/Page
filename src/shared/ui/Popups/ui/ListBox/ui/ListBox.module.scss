@@ -1,0 +1,116 @@
+.listBox {
+    background-color: var(--dark-bg);
+    color: var(--hint);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.72px;
+    word-wrap: break-word;
+
+    &:hover {
+        .arrowBtn {
+            transform: rotate(180deg);
+
+            path {
+                fill: var(--accent);
+            }
+        }
+    }
+}
+
+.trigger {
+    color: var(--hint);
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--accent);
+        animation: animateColorTrigger 0.3s linear;
+
+        @keyframes animateColorTrigger {
+            0% {
+                color: var(--hint);
+            }
+
+            100% {
+                color: var(--accent);
+            }
+        }
+
+        path {
+            fill: var(--accent);
+            animation: animatePath 0.3s linear;
+
+            @keyframes animatePath {
+                0% {
+                    fill: var(--icon);
+                }
+
+                100% {
+                    fill: var(--accent);
+                }
+            }
+        }
+    }
+}
+
+.selected {
+    color: var(--accent);
+}
+
+.options {
+    background-color: var(--bg);
+    position: absolute;
+    z-index: 10000;
+    border-radius: 4px;
+    cursor: pointer;
+    animation: animate 0.3s linear;
+
+    @keyframes animate {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.label{
+    margin-right: 4px;
+}
+
+.readonly {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.item {
+    box-shadow: 0 0 26px rgb(233 237 243 / 80%);
+    padding: 10px 20px;
+    min-width: 202px;
+
+    &:hover {
+        input {
+            background-color: var(--accent-light);
+        }
+
+        color: var(--text);
+        background-color: var(--accent-light);
+        animation: animateColorItem 0.3s linear;
+
+        @keyframes animateColorItem {
+            0% {
+                color: var(--hint);
+            }
+
+            100% {
+                color: var(--text);
+            }
+        }
+    }
+}

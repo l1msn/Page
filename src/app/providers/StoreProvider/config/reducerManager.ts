@@ -49,9 +49,7 @@ function createReducerManager(
             if (!key || reducers[key]) {
                 return;
             }
-            // @ts-ignore
             reducers[key] = reducer;
-            // @ts-ignore
             mountedReducers[key] = true;
             combinedReducer = combineReducers(reducers);
         },
@@ -61,7 +59,6 @@ function createReducerManager(
             }
             delete reducers[key];
             keysToRemove.push(key);
-            // @ts-ignore
             mountedReducers[key] = false;
             combinedReducer = combineReducers(reducers);
         },

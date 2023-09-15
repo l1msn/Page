@@ -8,6 +8,7 @@ type SvgProps = Omit<React.SVGProps<SVGSVGElement>, 'onClick'>;
 interface IIconPropsBase extends SvgProps, TestProps {
     className?: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
+    hover?: boolean;
 }
 
 interface IIconPropsNonClickable extends IIconPropsBase {
@@ -25,6 +26,7 @@ const Icon: React.FC<IconProps> = (props: IconProps): JSX.Element => {
     const {
         className,
         Svg,
+        hover = true,
         width = 24,
         height = 24,
         clickable,
@@ -38,7 +40,9 @@ const Icon: React.FC<IconProps> = (props: IconProps): JSX.Element => {
             width={width}
             height={height}
             data-testid={dataTestId}
-            className={classNames(cls.Icon, {}, [className])}
+            className={classNames(cls.Icon, { [cls.hover]: hover }, [
+                className,
+            ])}
             onClick={undefined}
         />
     );

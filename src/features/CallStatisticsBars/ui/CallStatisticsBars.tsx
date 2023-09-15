@@ -25,13 +25,13 @@ const CallStatisticsBars: React.FC<ICallStatisticsBarsProps> = ({
                         label={'Качество разговоров '}
                         specialText={`${40}%`}
                         length={44}
-                        color={'red'}
+                        color={'yellow'}
                     />
                     <ProgressBarColored
                         label={'Конверсия в заказ '}
                         specialText={`${67}%`}
                         length={50}
-                        color={'yellow'}
+                        color={'red'}
                     />
                 </HStack>
             </div>

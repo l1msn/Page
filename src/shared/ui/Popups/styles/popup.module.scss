@@ -11,31 +11,6 @@
     cursor: pointer;
 }
 
-.active {
-    background: var(--inverted-primary-color);
-
-    &:hover {
-        transform: scale(1.01);
-        opacity: 0.8;
-        fill-opacity: 0.8;
-        stroke-opacity: 0.8;
-        animation: animate 0.3s linear;
-        border-radius: 12px;
-    }
-
-    @keyframes animate {
-        0% {
-            background: var(--card-bg);
-            opacity: 1;
-        }
-
-        100% {
-            background: var(--inverted-primary-color);
-            opacity: 0.8;
-        }
-    }
-}
-
 .disabled {
     opacity: 0.7;
     cursor: not-allowed;

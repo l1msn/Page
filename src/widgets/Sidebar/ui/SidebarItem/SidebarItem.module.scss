@@ -43,9 +43,11 @@
     background: var(--sidebar-bg-actice);
     position: relative;
     border-left: 3px solid var(--accent);
+
     .link {
         color: var(--sidebar-text-active);
     }
+
     path {
         fill-opacity: 1;
     }

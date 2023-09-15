@@ -16,9 +16,7 @@ const ForbiddenPage: React.FC<IForbiddenPageProps> = ({
         <Page
             data-testid={'ForbiddenPage'}
             className={classNames('', {}, [className])}
-        >
-            {t('No access')}
-        </Page>
+        ></Page>
     );
 };
 

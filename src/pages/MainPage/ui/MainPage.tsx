@@ -6,11 +6,7 @@ import { Text } from '@/shared/ui/Text';
 const MainPage: React.FC = (): JSX.Element => {
     const { t } = useTranslation();
 
-    return (
-        <Page data-testid={'MainPage'}>
-            <Text title={t('В ТЗ сказано, что тут ничего нет)')} />
-        </Page>
-    );
+    return <Page data-testid={'MainPage'}></Page>;
 };
 
 export default MainPage;

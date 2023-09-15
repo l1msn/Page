@@ -2,42 +2,40 @@
     transition: 0.2s linear;
 
     --dark-bg: #F1F4F9;
-    --bg: #FFFFFF;
+    --bg: #FFF;
     --shadow: #E9EDF3;
-
+    --card-player-bg: #EAF0FA;
     --sidebar-bg: #091336;
-    --sidebar-bg-actice: rgba(216, 228, 251, 0.32);
-    --sidebar-text-active: #FFFFFF;
-    --sidebar-text: rgba(255, 255, 255, 0.60);
+    --sidebar-bg-actice: rgb(216 228 251 / 32%);
+    --sidebar-text-active: #FFF;
+    --sidebar-text: rgb(255 255 255 / 60%);
     --sibebar-button: #005FF8;
     --sibebar-button-hover: #0024CB;
     --sibebar-button-click: #274BC8;
-
     --content-button: #005FF8;
     --content-button-hover: #0024CB;
     --content-button-click: #274BC8;
-
+    --input-border: #002cfb;
     --navbar-bg: #FFF;
     --navbar-bg-shadow: #E9EDF3;
-
     --avatar-dropdown-bg: #FFF;
-    --avatar-dropdown-shadow: rgba(129, 135, 163, 0.24);
+    --avatar-dropdown-shadow: rgb(129 135 163 / 24%);
     --avatar-dropdown-text: #005FF8;
-
     --content-bg: #F1F4F9;
-
     --text: #122945;
     --text-grayed: #899CB1;
-
     --green-ui: #28A879;
     --blue-ui: #002CFB;
     --yellow-ui: #FFD500;
     --red-ui: #EA1A4F;
-
     --hint: #899CB1;
     --cancel: #EA1A4F;
     --save: #62DE85;
     --icon: #ADBFDF;
+    --icon-red: #ea1a4f;
+    --icon-green: #28a879;
+    --icon-blue: #005ff8;
     --accent: #002CFB;
+    --accent-light: #dee4fe;
 }
 
