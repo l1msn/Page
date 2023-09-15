@@ -15,7 +15,7 @@ interface IListBoxProps {
     items?: IListBoxItems[];
     value?: string;
     defaultValue?: string;
-    onChange: <T extends string>(value: T) => void;
+    onChange?: <T extends string>(value: T) => void;
     readonly?: boolean;
     direction?: DropDownDirection;
     label?: string;
@@ -58,13 +58,15 @@ const ListBox: React.FC<IListBoxProps> = memo(
                     disabled={readonly}
                 >
                     <HListBox.Button className={cls.trigger}>
-                        {value ?? defaultValue}
-                        <Icon
-                            height={24}
-                            width={24}
-                            Svg={ArrowDownIcon}
-                            className={cls.arrowBtn}
-                        />
+                        <HStack>
+                            <p>{value ?? defaultValue}</p>
+                            <Icon
+                                height={24}
+                                width={24}
+                                Svg={ArrowDownIcon}
+                                className={cls.arrowBtn}
+                            />
+                        </HStack>
                     </HListBox.Button>
                     <Transition
                         enter="transition duration-100 ease-out"
@@ -91,12 +93,24 @@ const ListBox: React.FC<IListBoxProps> = memo(
                                             className={classNames(
                                                 cls.item,
                                                 {
+                                                    [cls.selected]: selected,
                                                     [popupCls.active]: active,
                                                     [popupCls.disabled]:
                                                         item.disabled,
                                                 },
                                                 [],
                                             )}
+                                            onClick={(e) => {
+                                                if (item.onClick)
+                                                    item.onClick();
+
+                                                if (
+                                                    item.preventCloseWhenSelected
+                                                ) {
+                                                    e.preventDefault();
+                                                    e.stopPropagation();
+                                                }
+                                            }}
                                         >
                                             {item.content}
                                         </li>

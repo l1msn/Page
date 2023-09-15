@@ -1,0 +1,23 @@
+.callStatusIcon {
+    transition: 0.5s;
+}
+
+.unsuccess {
+   path {
+      fill: var(--icon-red)
+   }
+}
+
+.colorCallIn {
+
+    path {
+      fill: var(--icon-blue);
+    }
+}
+
+.colorCallOut {
+  transform: rotate(180deg);
+    path {
+      fill: var(--icon-green);
+    }
+}

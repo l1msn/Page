@@ -26,6 +26,7 @@ const AppLogo: React.FC<IAppLogoProps> = memo(
                 className={classNames(cls.appLogoWrapper, {}, [className])}
             >
                 <Icon
+                    hover={false}
                     width={width}
                     height={height}
                     color={'black'}

@@ -1,0 +1,39 @@
+.dateFilter {
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    p {
+      color: #002CFB;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      word-wrap: break-word
+    }
+}
+.leftArrow {
+    padding-right: 8px;
+}
+
+
+.dropdown {
+    padding-top: 3px;
+}
+
+.datePicker {
+    &:hover {
+      path {
+        fill: var(--accent);
+        animation: animatePath 0.3s linear;
+
+        @keyframes animatePath {
+          0% {
+            fill: var(--icon);
+          }
+
+          100% {
+            fill: var(--accent);
+          }
+        }
+      }
+    }
+}

@@ -1,5 +1,4 @@
 .card {
-
     background-color: var(--bg);
 }
 
@@ -21,7 +20,10 @@
 
 .accept {
     border: 2px solid var(--save);
+}
 
+.player {
+    background-color: var(--card-player-bg);
 }
 
 .gap_0 {

@@ -2,7 +2,7 @@ import React, { JSX, memo, useCallback } from 'react';
 import classNames from '@/shared/lib/classNames/classNames';
 import cls from './CallSortType.module.scss';
 import { ListBox } from '@/shared/ui/Popups';
-import itemsCallsListSortType from '@/entities/Filtres/consts/itemsCallsListSortType';
+import itemsCallsListSortType from '@/features/FilterByCalls/consts/itemsCallsListSortType';
 
 interface ICallSortTypeProps {
     className?: string;

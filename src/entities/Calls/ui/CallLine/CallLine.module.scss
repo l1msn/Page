@@ -1,0 +1,153 @@
+.callLine {
+    display: inline-flex;
+    background-color: var(--bg);
+    height: 65px;
+    width: 100%;
+
+    .content {
+        padding-left: 40px;
+        .time {
+            padding-left: 30px;
+            font-size: 15px;
+            color: var(--text);
+            font-weight: 400;
+            line-height: 21px;
+            word-wrap: break-word
+        }
+
+        .employer {
+            padding-left: 52px;
+        }
+
+        .call {
+            width: 200px;
+            padding-left: 88px;
+            font-size: 15px;
+            color: var(--text);
+            font-weight: 400;
+            line-height: 21px;
+            word-wrap: break-word
+        }
+
+        .source {
+            padding-left: 280px;
+            font-size: 15px;
+            color: var(--text-grayed);
+            font-weight: 400;
+            line-height: 21px;
+            word-wrap: break-word
+        }
+
+        .mark {
+            padding-left: 155px;
+        }
+
+        .length {
+            text-align: right;
+            width: 100%;
+
+            padding-right: 40px;
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0.15px;
+            word-wrap: break-word;
+            align-content: end;
+        }
+
+        .audio {
+
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+                animation: animateOpacity 0.3s linear;
+
+                ~.length {
+                    opacity: 0;
+                }
+
+                @keyframes animateOpacity {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.callLineHeader {
+    display: inline-flex;
+    background-color: var(--bg);
+    height: 65px;
+    width: 100%;
+
+    color: var(--text-grayed);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    word-wrap: break-word;
+    border-radius: 8px 8px;
+
+    .content {
+        padding-left: 40px;
+        .time {
+            padding-left: 30px;
+
+        }
+
+        .employer {
+            padding-left: 48px;
+        }
+
+        .call {
+            padding-left: 60px;
+        }
+
+        .source {
+            padding-left: 280px;
+        }
+
+        .mark {
+            padding-left: 155px;
+        }
+
+        .length {
+            padding-left: 415px;
+            padding-right: 40px;
+            text-align: right;
+            width: 100%;
+            word-wrap: break-word;
+            align-content: end;
+
+        }
+
+        .audio {
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+                animation: animateOpacity 0.3s linear;
+
+                ~.length {
+                    opacity: 0;
+                }
+
+                @keyframes animateOpacity {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -7,7 +7,6 @@ import IDropdownItem from '../types/IDropdownItem';
 import { DropDownDirection } from '@/shared/types/ui';
 import AppLink from '../../../../AppLink';
 import mapDirectionClass from '../../../styles/consts';
-import Button from '@/shared/ui/Button';
 
 interface IDropdownProps {
     className?: string;
@@ -48,7 +47,14 @@ const Dropdown: React.FC<IDropdownProps> = (
                                 },
                                 [],
                             )}
-                            onClick={item.onClick}
+                            onClick={(e) => {
+                                if (item.onClick) item.onClick();
+
+                                if (item.preventCloseWhenSelected) {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                }
+                            }}
                         >
                             {item.content}
                         </button>

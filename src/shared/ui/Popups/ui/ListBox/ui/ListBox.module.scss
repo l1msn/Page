@@ -5,6 +5,15 @@
     font-weight: 400;
     line-height: 20.72px;
     word-wrap: break-word;
+
+    &:hover {
+        .arrowBtn {
+            transform: rotate(180deg);
+            path {
+                fill: var(--accent);
+            }
+        }
+    }
 }
 
 .trigger {
@@ -17,9 +26,9 @@
     cursor: pointer;
     &:hover {
         color: var(--accent);
-        animation: animateColor 0.3s linear;
+        animation: animateColorTrigger 0.3s linear;
 
-        @keyframes animateColor {
+        @keyframes animateColorTrigger {
             0% {
                 color: var(--hint);
             }
@@ -44,13 +53,17 @@
             }
         }
     }
+}
 
+.selected {
+    color: var(--accent);
 }
 
 .options {
+    background-color: var(--bg);
     position: absolute;
     z-index: 10000;
-    border-radius: 12px;
+    border-radius: 4px;
     cursor: pointer;
 
     animation: animate 0.3s linear;
@@ -76,19 +89,22 @@
 }
 
 .item {
+    box-shadow: 0px 0px 26px rgba(233,237,243,.8);
     padding: 10px 20px;
-
+    min-width: 202px;
     &:hover {
-        color: var(--accent);
-        animation: animateColor 0.3s linear;
+        color: var(--text);
+        background-color: var(--accent-light);
+        border-radius: 0px;
+        animation: animateColorItem 0.3s linear;
 
-        @keyframes animateColor {
+        @keyframes animateColorItem {
             0% {
                 color: var(--hint);
             }
 
             100% {
-                color: var(--accent);
+                color: var(--text);
             }
         }
     }

@@ -5,6 +5,7 @@ interface IDropdownItem {
     content?: React.ReactNode;
     onClick?: () => void;
     href?: string;
+    preventCloseWhenSelected?: boolean;
 }
 
 export default IDropdownItem;
