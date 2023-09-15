@@ -23,10 +23,7 @@
 
 ## Обзор проекта
 
-Оценить проект можите по [ссылке](https://comfy-cassata-231ffe.netlify.app)
-
-Проект представляет из себя pet-проект для демонстрации своих навыков
-работадателю.
+Оценить проект можите по [ссылке](https://jocular-pudding-6919e5.netlify.app/calls)
 
 ----
 
@@ -70,7 +67,7 @@ npm start - запуск сервера проекта в dev режиме (Vite
 
 ### Netlify
 
-Серверная часть размещена на [Netlify](https://vercel.com) - https://social-backend-psi.vercel.app
+Серверная часть размещена на [Netlify](https://vercel.com) - https://jocular-pudding-6919e5.netlify.app/calls
 
 ----
 
