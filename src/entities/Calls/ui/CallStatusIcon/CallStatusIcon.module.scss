@@ -3,21 +3,21 @@
 }
 
 .unsuccess {
-   path {
-      fill: var(--icon-red)
-   }
+    path {
+        fill: var(--icon-red)
+    }
 }
 
 .colorCallIn {
-
     path {
-      fill: var(--icon-blue);
+        fill: var(--icon-blue);
     }
 }
 
 .colorCallOut {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
+
     path {
-      fill: var(--icon-green);
+        fill: var(--icon-green);
     }
 }

@@ -9,6 +9,7 @@
     &:hover {
         .arrowBtn {
             transform: rotate(180deg);
+
             path {
                 fill: var(--accent);
             }
@@ -24,6 +25,7 @@
     padding: 0;
     margin: 0;
     cursor: pointer;
+
     &:hover {
         color: var(--accent);
         animation: animateColorTrigger 0.3s linear;
@@ -65,7 +67,6 @@
     z-index: 10000;
     border-radius: 4px;
     cursor: pointer;
-
     animation: animate 0.3s linear;
 
     @keyframes animate {
@@ -89,13 +90,17 @@
 }
 
 .item {
-    box-shadow: 0px 0px 26px rgba(233,237,243,.8);
+    box-shadow: 0 0 26px rgb(233 237 243 / 80%);
     padding: 10px 20px;
     min-width: 202px;
+
     &:hover {
+        input {
+            background-color: var(--accent-light);
+        }
+
         color: var(--text);
         background-color: var(--accent-light);
-        border-radius: 0px;
         animation: animateColorItem 0.3s linear;
 
         @keyframes animateColorItem {

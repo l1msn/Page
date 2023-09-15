@@ -18,6 +18,7 @@ interface IListBoxProps {
     onChange?: <T extends string>(value: T) => void;
     readonly?: boolean;
     direction?: DropDownDirection;
+    withArrow?: boolean;
     label?: string;
 }
 
@@ -31,6 +32,7 @@ const ListBox: React.FC<IListBoxProps> = memo(
             onChange,
             readonly,
             label,
+            withArrow = true,
             direction = 'bottom left',
         } = props;
 
@@ -60,12 +62,14 @@ const ListBox: React.FC<IListBoxProps> = memo(
                     <HListBox.Button className={cls.trigger}>
                         <HStack>
                             <p>{value ?? defaultValue}</p>
-                            <Icon
-                                height={24}
-                                width={24}
-                                Svg={ArrowDownIcon}
-                                className={cls.arrowBtn}
-                            />
+                            {withArrow && (
+                                <Icon
+                                    height={24}
+                                    width={24}
+                                    Svg={ArrowDownIcon}
+                                    className={cls.arrowBtn}
+                                />
+                            )}
                         </HStack>
                     </HListBox.Button>
                     <Transition

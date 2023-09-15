@@ -79,16 +79,7 @@ const AudioPlayer: React.FC<IAudioPlayerProps> = (
         } else {
             if (url) audioRef.current?.pause();
         }
-    }, [
-        call.id,
-        call.partnership_id,
-        call.record,
-        fetchAudio,
-        id,
-        playStatus,
-        setId,
-        url,
-    ]);
+    }, [playStatus]);
 
     useEffect(() => {
         if (url) audioRef.current?.play();
@@ -175,7 +166,7 @@ const AudioPlayer: React.FC<IAudioPlayerProps> = (
                             onTimeUpdate={handleTimeUpdate}
                             onEnded={handleEndingAudio}
                         ></audio>
-                        <div>
+                        <div className={cls.length}>
                             {typeof duration === 'string'
                                 ? duration
                                 : DatesUtils.getMinutesFromSeconds(

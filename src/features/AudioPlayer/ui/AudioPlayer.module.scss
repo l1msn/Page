@@ -4,8 +4,16 @@
 }
 
 .audio {
-    padding: 0 18px;
-    margin-right: 18px;
+    padding: 0 16px;
+    margin-right: 16px;
+}
+
+.length {
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 400;
+    line-height: 21.75px;
+    word-wrap: break-word
 }
 
 .bar {
@@ -27,6 +35,7 @@
     background-color: #adbfdf;
     z-index: 1;
 }
+
 .barTop {
     position: absolute;
     top: 0;

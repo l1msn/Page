@@ -24,6 +24,8 @@ import Loader from '@/shared/ui/Loader';
 import { Text } from '@/shared/ui/Text';
 import CallDateLine from '@/entities/Calls/ui/CallDateLine/CallDateLine';
 import AudioPlayer from '@/features/AudioPlayer';
+import ArrowDownIcon from '@/shared/assets/icons/arrow-down-icon.svg';
+import CancelIcon from '@/shared/assets/icons/close-icon.svg';
 
 interface ICallsListProps {
     className?: string;
@@ -67,6 +69,10 @@ const CallsList: React.FC<ICallsListProps> = ({
         },
         [dispatch],
     );
+
+    const resetFiltres = useCallback(() => {
+        dispatch(filterCallsActions.resetFilters());
+    }, []);
 
     useEffect(() => {
         const defaultData: IDatesPages = {
@@ -176,10 +182,44 @@ const CallsList: React.FC<ICallsListProps> = ({
                         }
                     />
                 </HStack>
-                <CallSortType
-                    onChange={onChangeTypeCalls}
-                    value={filterType?.filter as itemsCallsListSortType}
-                />
+                <HStack gap={'32'}>
+                    {filterType?.filter != 'Все типы' && (
+                        <HStack className={cls.filter} onClick={resetFiltres}>
+                            <p>{'Сбросить фильтры'}</p>
+                            <Icon
+                                height={18}
+                                width={18}
+                                Svg={CancelIcon}
+                                className={cls.cancelIcon}
+                            />
+                        </HStack>
+                    )}
+
+                    <CallSortType
+                        onChange={onChangeTypeCalls}
+                        value={filterType?.filter as itemsCallsListSortType}
+                    />
+                    <HStack className={cls.filter}>
+                        <p>{'Все сотрудники'}</p>
+                        <Icon height={24} width={24} Svg={ArrowDownIcon} />
+                    </HStack>
+                    <HStack className={cls.filter}>
+                        <p>{'Все звонки'}</p>
+                        <Icon height={24} width={24} Svg={ArrowDownIcon} />
+                    </HStack>
+                    <HStack className={cls.filter}>
+                        <p>{'Все источники'}</p>
+                        <Icon height={24} width={24} Svg={ArrowDownIcon} />
+                    </HStack>
+                    <HStack className={cls.filter}>
+                        <p>{'Все оценки'}</p>
+                        <Icon height={24} width={24} Svg={ArrowDownIcon} />
+                    </HStack>
+                    <HStack className={cls.filter}>
+                        <p>{'Все ошибки'}</p>
+                        <Icon height={24} width={24} Svg={ArrowDownIcon} />
+                    </HStack>
+                </HStack>
             </HStack>
             <VStack max align={'center'}>
                 <CallLine

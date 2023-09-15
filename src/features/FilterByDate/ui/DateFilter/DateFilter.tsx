@@ -127,7 +127,7 @@ const DateFilter: React.FC<IDateFilterProps> = ({
                 content: (
                     <div className={cls.customDate}>
                         <p>{'Указать даты'}</p>
-                        <HStack>
+                        <HStack className={cls.input}>
                             <InputMask
                                 mask="99.99.99"
                                 placeholder="__.__.__"
@@ -148,6 +148,9 @@ const DateFilter: React.FC<IDateFilterProps> = ({
                                 }}
                             />
                             <Icon
+                                width={18}
+                                height={18}
+                                className={cls.calendar}
                                 Svg={CalendarIcon}
                                 clickable
                                 onClick={handleCustomDate}
@@ -175,6 +178,7 @@ const DateFilter: React.FC<IDateFilterProps> = ({
             <HStack gap={'8'} className={cls.datePicker}>
                 <Icon width={18} height={18} Svg={CalendarIcon} />
                 <ListBox
+                    withArrow={false}
                     className={className}
                     value={filterByDate?.filter}
                     items={itemsDateFilterListBox}
